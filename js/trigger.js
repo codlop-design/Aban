@@ -376,10 +376,10 @@
   function projects_5col() {
     var owl = $(".projects_5col");
     owl.owlCarousel({
-      loop: true,
+      loop: false,
       margin: 10,
       autoplay: true,
-      autoplayTimeout: 8000,
+      autoplayTimeout: 5000,
       nav: true,
       dots: false,
       navText: ["<i class='base-icon-left-chevron'></i>", "<i class='base-icon-right-chevron'></i>"],
@@ -408,10 +408,10 @@
   function projects_4col() {
     var owl = $(".projects_4col");
     owl.owlCarousel({
-      loop: true,
+      loop: false,
       margin: 10,
       autoplay: true,
-      autoplayTimeout: 8000,
+      autoplayTimeout: 5000,
       nav: true,
       dots: false,
       navText: ["<i class='base-icon-left-chevron'></i>", "<i class='base-icon-right-chevron'></i>"],
@@ -467,6 +467,48 @@
     });
   }
   client_items();
+
+    /*========= [_team_items] =========*/
+    function team_items() {
+      var owl = $(".team-slide");
+      owl.owlCarousel({
+        loop: false,
+        margin: 30,
+        autoplay: true,
+        autoplayTimeout: 8000,
+        nav: true,
+        dots: false,
+        navText: ["<i class='base-icon-left-chevron'></i>", "<i class='base-icon-right-chevron'></i>"],
+        responsive: {
+          0: {
+            items: 1
+          },
+          425: {
+            items: 2
+          },
+          768: {
+            items: 3
+          },
+          1024: {
+            items: 4
+          }
+        }
+      });
+    }
+    team_items();
+
+        /*========= [_team_items] =========*/
+        function project_items() {
+          var owl = $(".project-thumb");
+          owl.owlCarousel({
+            items:1,
+            loop: false,
+            nav: true,
+            dots: false,
+            navText: ["<i class='base-icon-left-chevron'></i>", "<i class='base-icon-right-chevron'></i>"]
+          });
+        }
+        project_items();
 
   /*========= [_Sticky_header] =========*/
   $(window).on("scroll", function () {
